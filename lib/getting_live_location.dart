@@ -13,8 +13,8 @@ class LiveLocationMap extends StatefulWidget {
 }
 
 class _LiveLocationMapState extends State<LiveLocationMap> {
-   MapboxMapController? _mapController;
-   LatLng? _currentLocation;
+   late MapboxMapController _mapController;
+   late LatLng _currentLocation;
 
 
   @override
@@ -76,7 +76,7 @@ class _LiveLocationMapState extends State<LiveLocationMap> {
       _mapController?.addSymbol(
         SymbolOptions(
           geometry: _currentLocation!,
-          iconImage: 'Flag', // Use the image name
+          iconImage: 'assets/images/Group 71.png', // Use the image name
         ),
       );
       _mapController?.animateCamera(

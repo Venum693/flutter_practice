@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'full_screen_map.dart';
 import 'getting_live_location.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: LiveLocationMap()
+      home: FullScreenMap()
     );
   }
 }
