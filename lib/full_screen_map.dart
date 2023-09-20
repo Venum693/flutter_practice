@@ -91,7 +91,9 @@ class _FullScreenMapState extends State<FullScreenMap> {
       children: [
         // Symbols
         FloatingActionButton(
-          child: const Icon(Icons.location_on_rounded),
+          splashColor: Colors.green,
+          tooltip: 'LOCATE ME',
+          backgroundColor: Colors.green.shade800,
           onPressed: () async {
             if (_currentLocation == null ) {
               Position position = await Geolocator.getCurrentPosition(
@@ -121,29 +123,34 @@ class _FullScreenMapState extends State<FullScreenMap> {
             }
 
           },
+          child: const Icon(Icons.my_location),
         ),
         const SizedBox(height: 5),
 
         // Zoom In
         FloatingActionButton(
-          child: const Icon(Icons.zoom_in),
+          tooltip: 'ZOOM IN',
+          backgroundColor: Colors.green.shade800,
           onPressed: () {
             mapController.animateCamera(
               CameraUpdate.zoomIn(),
               // CameraUpdate.tiltTo(40),
             );
           },
+          child: const Icon(Icons.zoom_in),
         ),
         const SizedBox(height: 5),
 
         // Zoom Out
         FloatingActionButton(
-          child: const Icon(Icons.zoom_out),
+          tooltip: 'ZOOM OUT',
+          backgroundColor: Colors.green.shade800,
           onPressed: () {
             mapController.animateCamera(
               CameraUpdate.zoomOut(),
             );
           },
+          child: const Icon(Icons.zoom_out),
         ),
         const SizedBox(height: 5),
 
