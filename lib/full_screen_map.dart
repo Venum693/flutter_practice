@@ -33,7 +33,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
 
   void _onStyleLoaded() {
     addImageFromAsset("assetImage", "assets/images/Group 71.png");
-    addImageFromUrl("networkImage", Uri.parse("https://via.placeholder.com/50"));
+    //addImageFromUrl("networkImage", Uri.parse("https://via.placeholder.com/50"));
   }
 
   Future<void> addImageFromAsset(String name, String assetName) async {
@@ -63,12 +63,17 @@ class _FullScreenMapState extends State<FullScreenMap> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
-                color: Colors.yellow,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.black.withOpacity(0.5),
+                ),
                 child:  Text(
-                  address==null ? 'ShravanaBelagola': '$address',
-                  style: TextStyle(
+                  address==null ? ' ShravanaBelagola ': ' $address ',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -84,7 +89,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        // Simbols
+        // Symbols
         FloatingActionButton(
           child: const Icon(Icons.location_on_rounded),
           onPressed: () async {
@@ -106,8 +111,9 @@ class _FullScreenMapState extends State<FullScreenMap> {
                   iconImage: 'assetImage',
                   iconColor: '#fffdd835',
                   iconSize: 0.15,
-                  textField: 'My current Location',
+                  textField: 'YOU ARE HERE',
                   textColor: '#ff000000',
+                  textSize: 20,
                   textOffset: const Offset(0, 2),
                 ),
               );
