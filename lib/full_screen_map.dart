@@ -95,32 +95,33 @@ class _FullScreenMapState extends State<FullScreenMap> {
           tooltip: 'LOCATE ME',
           backgroundColor: Colors.green.shade800,
           onPressed: () async {
-            if (_currentLocation == null ) {
-              Position position = await Geolocator.getCurrentPosition(
-                desiredAccuracy: LocationAccuracy.high,
-              );
-
-              setState(() {
-                _currentLocation = LatLng(position.latitude, position.longitude);
-              });
-              mapController.animateCamera(
-                CameraUpdate.newLatLng(_currentLocation!),
-              );
-              mapController.addSymbol(
-                SymbolOptions(
-                  geometry: _currentLocation,
-                  // iconImage: 'networkImage',
-                  iconImage: 'assetImage',
-                  iconColor: '#fffdd835',
-                  iconSize: 0.15,
-                  textField: 'YOU ARE HERE',
-                  textColor: '#ff000000',
-                  textSize: 20,
-                  textOffset: const Offset(0, 2),
-                ),
-              );
-              getAddressFromLatLng(_currentLocation!);
-            }
+            await _getLocationAndPermission();
+            // if (_currentLocation == null ) {
+            //   Position position = await Geolocator.getCurrentPosition(
+            //     desiredAccuracy: LocationAccuracy.high,
+            //   );
+            //
+            //   setState(() {
+            //     _currentLocation = LatLng(position.latitude, position.longitude);
+            //   });
+            //   mapController.animateCamera(
+            //     CameraUpdate.newLatLng(_currentLocation!),
+            //   );
+            //   mapController.addSymbol(
+            //     SymbolOptions(
+            //       geometry: _currentLocation,
+            //       // iconImage: 'networkImage',
+            //       iconImage: 'assetImage',
+            //       iconColor: '#fffdd835',
+            //       iconSize: 0.15,
+            //       textField: 'YOU ARE HERE',
+            //       textColor: '#ff000000',
+            //       textSize: 20,
+            //       textOffset: const Offset(0, 2),
+            //     ),
+            //   );
+            //   getAddressFromLatLng(_currentLocation!);
+            // }
 
           },
           child: const Icon(Icons.my_location),
@@ -171,6 +172,52 @@ class _FullScreenMapState extends State<FullScreenMap> {
       ),
       compassEnabled: true,
     );
+  }
+
+  Future<void> _getLocationAndPermission() async {
+    final LocationPermission permission = await Geolocator.requestPermission();
+
+    if (permission == LocationPermission.always ||
+        permission == LocationPermission.whileInUse) {
+      await _getCurrentLocation();
+    } else {
+      // Handle permission denied or restricted state
+      // You can show a dialog or a message to the user
+      print('Location permission denied');
+    }
+  }
+
+  Future<void> _getCurrentLocation() async {
+    try {
+      Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high,
+      );
+
+      setState(() {
+        _currentLocation = LatLng(position.latitude, position.longitude);
+      });
+
+      mapController.animateCamera(
+        CameraUpdate.newLatLng(_currentLocation!),
+      );
+
+      mapController.addSymbol(
+        SymbolOptions(
+          geometry: _currentLocation,
+          iconImage: 'assetImage',
+          iconColor: '#fffdd835',
+          iconSize: 0.15,
+          textField: 'YOU ARE HERE',
+          textColor: '#ff000000',
+          textSize: 20,
+          textOffset: const Offset(0, 2),
+        ),
+      );
+
+      getAddressFromLatLng(_currentLocation!);
+    } catch (e) {
+      print('Error getting location: $e');
+    }
   }
 
 
