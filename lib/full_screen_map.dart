@@ -169,6 +169,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
         target: _currentLocation ?? center,
         zoom: 14,
       ),
+      compassEnabled: true,
     );
   }
 
