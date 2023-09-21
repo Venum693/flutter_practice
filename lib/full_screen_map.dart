@@ -18,7 +18,7 @@ class FullScreenMap extends StatefulWidget {
 
 class _FullScreenMapState extends State<FullScreenMap> {
   late MapboxMapController mapController;
-  final LatLng center = const LatLng(12.8519, 76.4807);
+  final LatLng center = const LatLng(13.1989, 77.7068);
    LatLng? _currentLocation;
   String? address;
 
@@ -68,7 +68,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
                   color: Colors.black.withOpacity(0.5),
                 ),
                 child:  Text(
-                  address==null ? ' ShravanaBelagola ': ' $address ',
+                  address==null ? ' Kempegowda International Airport (BLR) ': ' $address ',
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 20,
@@ -90,42 +90,54 @@ class _FullScreenMapState extends State<FullScreenMap> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         // Symbols
-        FloatingActionButton(
-          splashColor: Colors.green,
-          tooltip: 'LOCATE ME',
-          backgroundColor: Colors.green.shade800,
-          onPressed: () async {
-            await _getLocationAndPermission();
-            // if (_currentLocation == null ) {
-            //   Position position = await Geolocator.getCurrentPosition(
-            //     desiredAccuracy: LocationAccuracy.high,
-            //   );
-            //
-            //   setState(() {
-            //     _currentLocation = LatLng(position.latitude, position.longitude);
-            //   });
-            //   mapController.animateCamera(
-            //     CameraUpdate.newLatLng(_currentLocation!),
-            //   );
-            //   mapController.addSymbol(
-            //     SymbolOptions(
-            //       geometry: _currentLocation,
-            //       // iconImage: 'networkImage',
-            //       iconImage: 'assetImage',
-            //       iconColor: '#fffdd835',
-            //       iconSize: 0.15,
-            //       textField: 'YOU ARE HERE',
-            //       textColor: '#ff000000',
-            //       textSize: 20,
-            //       textOffset: const Offset(0, 2),
-            //     ),
-            //   );
-            //   getAddressFromLatLng(_currentLocation!);
-            // }
-
-          },
-          child: const Icon(Icons.my_location),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.green.shade800,
+          ),
+          child: TextButton(
+            onPressed: () async {
+              await _getLocationAndPermission();
+            },
+            child: const Text('Locate Me', style: TextStyle(color: Colors.white),),
+          ),
         ),
+        // FloatingActionButton(
+        //   splashColor: Colors.green,
+        //   tooltip: 'LOCATE ME',
+        //   backgroundColor: Colors.green.shade800,
+        //   onPressed: () async {
+        //     await _getLocationAndPermission();
+        //     // if (_currentLocation == null ) {
+        //     //   Position position = await Geolocator.getCurrentPosition(
+        //     //     desiredAccuracy: LocationAccuracy.high,
+        //     //   );
+        //     //
+        //     //   setState(() {
+        //     //     _currentLocation = LatLng(position.latitude, position.longitude);
+        //     //   });
+        //     //   mapController.animateCamera(
+        //     //     CameraUpdate.newLatLng(_currentLocation!),
+        //     //   );
+        //     //   mapController.addSymbol(
+        //     //     SymbolOptions(
+        //     //       geometry: _currentLocation,
+        //     //       // iconImage: 'networkImage',
+        //     //       iconImage: 'assetImage',
+        //     //       iconColor: '#fffdd835',
+        //     //       iconSize: 0.15,
+        //     //       textField: 'YOU ARE HERE',
+        //     //       textColor: '#ff000000',
+        //     //       textSize: 20,
+        //     //       textOffset: const Offset(0, 2),
+        //     //     ),
+        //     //   );
+        //     //   getAddressFromLatLng(_currentLocation!);
+        //     // }
+        //
+        //   },
+        //   child: const Icon(Icons.my_location),
+        // ),
         const SizedBox(height: 5),
 
         // Zoom In
@@ -154,6 +166,25 @@ class _FullScreenMapState extends State<FullScreenMap> {
           child: const Icon(Icons.zoom_out),
         ),
         const SizedBox(height: 5),
+
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.green.shade800,
+          ),
+          child: TextButton(
+            onPressed: () {
+              setState(() {
+                address = 'Kempagowda International Airport (BLR)';
+              });
+              mapController.animateCamera(
+                CameraUpdate.newLatLng(center),
+              );
+            },
+            child: const Text('Reset', style: TextStyle(color: Colors.white)),
+
+          ),
+        )
 
         // Change Style
 

@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //remove debug banner
       title: 'MAPS',
-      home: FullScreenMap()
+      //home: FullScreenMap()
+      home: MapboxNavigationDemo(),
     );
   }
 }

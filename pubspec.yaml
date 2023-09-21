@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   mapbox_gl: ^0.16.0
+  #mapbox_gl: ^0.13.0
   #flutter_mapbox_navigation: ^0.1.0
   #flutter_mapbox: ^0.8.9
   geolocator: ^10.0.1
