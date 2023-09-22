@@ -28,12 +28,12 @@ class Welcome {
     uuid: json["uuid"]?? '',
   );
 
-  Map<String, dynamic> toJson() => {
-    "routes": List<dynamic>.from(routes!.map((x) => x.toJson())) ?? [],
-    "waypoints": List<dynamic>.from(waypoints!.map((x) => x.toJson())) ?? [],
-    "code": code,
-    "uuid": uuid,
-  };
+  // Map<String, dynamic> toJson() => {
+  //   "routes": List<dynamic>.from(routes!.map((x) => x.toJson())) ?? [],
+  //   "waypoints": List<dynamic>.from(waypoints!.map((x) => x.toJson())) ?? [],
+  //   "code": code,
+  //   "uuid": uuid,
+  // };
 }
 
 class Route {
@@ -62,14 +62,14 @@ class Route {
     geometry: json["geometry"],
   );
 
-  Map<String, dynamic> toJson() => {
-    "weight_name": weightName??'' ,
-    "weight": weight ?? 0.0,
-    "duration": duration ?? 0.0,
-    "distance": distance ?? 0.0,
-    "legs": List<dynamic>.from(legs!.map((x) => x.toJson())) ?? [],
-    "geometry": geometry ?? '',
-  };
+  // Map<String, dynamic> toJson() => {
+  //   "weight_name": weightName??'' ,
+  //   "weight": weight ?? 0.0,
+  //   "duration": duration ?? 0.0,
+  //   "distance": distance ?? 0.0,
+  //   "legs": List<dynamic>.from(legs!.map((x) => x.toJson())) ?? [],
+  //   "geometry": geometry ?? '',
+  // };
 }
 
 class Leg {
@@ -101,15 +101,15 @@ class Leg {
     summary: json["summary"] ?? '',
   );
 
-  Map<String, dynamic> toJson() => {
-    "via_waypoints": List<dynamic>.from(viaWaypoints!.map((x) => x)) ?? [],
-    "admins": List<dynamic>.from(admins!.map((x) => x.toJson())) ?? [],
-    "weight": weight ?? 0.0,
-    "duration": duration ?? 0.0,
-    "steps": List<dynamic>.from(steps!.map((x) => x)) ?? [],
-    "distance": distance ?? 0.0,
-    "summary": summary ?? '',
-  };
+  // Map<String, dynamic> toJson() => {
+  //   "via_waypoints": List<dynamic>.from(viaWaypoints!.map((x) => x)) ?? [],
+  //   "admins": List<dynamic>.from(admins!.map((x) => x.toJson())) ?? [],
+  //   "weight": weight ?? 0.0,
+  //   "duration": duration ?? 0.0,
+  //   "steps": List<dynamic>.from(steps!.map((x) => x)) ?? [],
+  //   "distance": distance ?? 0.0,
+  //   "summary": summary ?? '',
+  // };
 }
 
 class Admin {
@@ -126,10 +126,10 @@ class Admin {
     iso31661: json["iso_3166_1"] ?? '',
   );
 
-  Map<String, dynamic> toJson() => {
-    "iso_3166_1_alpha3": iso31661Alpha3 ?? '',
-    "iso_3166_1": iso31661  ?? '',
-  };
+  // Map<String, dynamic> toJson() => {
+  //   "iso_3166_1_alpha3": iso31661Alpha3 ?? '',
+  //   "iso_3166_1": iso31661  ?? '',
+  // };
 }
 
 class Waypoint {
@@ -149,9 +149,9 @@ class Waypoint {
     location: List<double>.from(json["location"].map((x) => x?.toDouble())) ?? [],
   );
 
-  Map<String, dynamic> toJson() => {
-    "distance": distance ?? 0.0,
-    "name": name ?? '',
-    "location": List<dynamic>.from(location!.map((x) => x)) ?? [],
-  };
+  // Map<String, dynamic> toJson() => {
+  //   "distance": distance ?? 0.0,
+  //   "name": name ?? '',
+  //   "location": List<dynamic>.from(location!.map((x) => x)) ?? [],
+  // };
 }
