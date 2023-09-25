@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  mapbox_gl: ^0.16.0
+  #mapbox_gl: ^0.16.0
   #mapbox_gl: ^0.13.0
   #flutter_mapbox_navigation: ^0.1.0
   #flutter_mapbox: ^0.8.9
@@ -39,6 +39,7 @@ dependencies:
   http: ^1.1.0
   geocoding: ^2.1.0
   #navigation_with_mapbox: ^0.0.7
+  mapbox_maps_flutter: ^0.4.4
 
 
 

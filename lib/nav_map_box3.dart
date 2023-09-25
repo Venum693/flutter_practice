@@ -5,6 +5,7 @@
 // import 'package:flutter/services.dart';
 // import 'package:mapbox_gl/mapbox_gl.dart';
 //
+//
 // class NavigationWithMapbox extends StatefulWidget {
 //   @override
 //   _NavigationWithMapboxState createState() => _NavigationWithMapboxState();
@@ -20,25 +21,35 @@
 //   int _currentStep = 0;
 //   late StreamSubscription<MapboxNavigationEvent> _subscription;
 //
+//
 //   void _onMapCreated(MapboxMapController controller) {
 //     mapController = controller;
 //     _addMarker(_origin);
 //     _addMarker(_destination);
+//
 //     _getRoute();
 //
 //   }
 //
+//   Future<void> addImageFromAsset(String name, String assetName) async {
+//     final ByteData bytes = await rootBundle.load(assetName);
+//     final Uint8List list = bytes.buffer.asUint8List();
+//     return mapController.addImage(name, list);
+//   }
+//
 //   void _addMarker(LatLng point) async {
-//     var image = await BitmapDescriptor.fromAssetImage(
-//       ImageConfiguration(devicePixelRatio: 2.5),
-//       'assets/images/marker.png',
-//     );
+//     // var image = await BitmapDescriptor.fromAssetImage(
+//     //   ImageConfiguration(devicePixelRatio: 2.5),
+//     //   'assets/images/marker.png',
+//     // );
+//     addImageFromAsset("assetImage", "assets/images/Group 71.png");
 //     mapController.addSymbol(
 //       SymbolOptions(
 //         geometry: point,
-//         iconImage: image,
+//         //iconImage: image,
 //         iconSize: 1,
-//       ),
+//         iconImage: 'assetImage',
+//       )
 //     );
 //   }
 //
@@ -53,11 +64,11 @@
 //     if (_route.isNotEmpty) {
 //       _isNavigating = true;
 //       _subscription = MapboxNavigation.onEventResult.listen((event) {
-//         if (event.event == MapboxNavigationEvent.progress_change) {
-//           setState(() {
-//             _currentStep = event.data['step'];
-//           });
-//         }
+//         // if (event.event == MapboxNavigationEvent.progress_change) {
+//         //   setState(() {
+//         //     _currentStep = event.data['step'];
+//         //   });
+//         // }
 //       });
 //       await MapboxNavigation.startNavigation(
 //         options: MapboxNavigationOptions(
@@ -96,9 +107,10 @@
 //       ),
 //       body: MapboxMap(
 //         onMapCreated: _onMapCreated,
+//         accessToken: 'pk.eyJ1IjoiaGVscHltb3RvIiwiYSI6ImNsamNscHVuejAyOXAzZG1vNXppYnM1NzkifQ.BB9fpPJb9eDpRJkWwkRHXA',
 //         initialCameraPosition: CameraPosition(
 //           target: _origin,
-//           zoom: 11.0,
+//           zoom: 14.0,
 //         ),
 //         onMapClick: (point, coordinates) {
 //           if (!_isNavigating) {
@@ -112,22 +124,35 @@
 //         },
 //         onStyleLoadedCallback: () {
 //           //MapboxMapController mapController = MapboxMapController();
-//           mapController.addImage(
-//             'arrow-icon',
-//             AssetImage('assets/images/arrow.png'),
-//           );
+//           addImageFromAsset("assetImage", "assets/images/Group 71.png");
+//           // mapController.addImage(
+//           //   'arrow-icon',
+//           //   AssetImage('assets/images/arrow.png') as Uint8List,
+//           // );
 //         },
+//         // annotation: _route.asMap().entries.map((entry) {
+//         //   return SymbolAnnotation(
+//         //     iconImage: 'assetImage',
+//         //     geometry: entry.value,
+//         //     annotationType: AnnotationType.symbol,
+//         //     iconSize: 0.5,
+//         //     rotateWithView: true,
+//         //     rotationAlignment: Alignment.center,
+//         //     rotation: _getBearing(entry.value, _route[_currentStep]),
+//         //     zIndex: entry.key.toDouble(),
+//         //   );
+//         // }).toList(),
 //
-//         annotations: _route.map((point) {
-//           return MarkerOptions(
-//             geometry: point,
-//             iconImage: 'arrow-icon',
-//             iconSize: 0.5,
-//             rotateWithView: true,
-//             rotationAlignment: Alignment.center,
-//             rotation: _getBearing(point, _route[_currentStep]),
-//           );
-//         }).toList(),
+//         // annotations: _route.map((point) {
+//         //   return MarkerOptions(
+//         //     geometry: point,
+//         //     iconImage: 'arrow-icon',
+//         //     iconSize: 0.5,
+//         //     rotateWithView: true,
+//         //     rotationAlignment: Alignment.center,
+//         //     rotation: _getBearing(point, _route[_currentStep]),
+//         //   );
+//         // }).toList(),
 //       ),
 //       floatingActionButton: FloatingActionButton(
 //         onPressed: _isNavigating ? _stopNavigation : _startNavigation,
