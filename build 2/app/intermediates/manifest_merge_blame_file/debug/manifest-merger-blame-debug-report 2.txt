@@ -1,0 +1,183 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_practice"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:5:5-66
+15-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:5:22-64
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:3:5-79
+16-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:3:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:4:5-81
+17-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:4:22-78
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:6:5-79
+18-->/Users/stipe/Desktop/VENU/flutter_practice/android/app/src/main/AndroidManifest.xml:6:22-76
+19
+20    <uses-feature
+20-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:10:5-12:35
+21        android:glEsVersion="0x00020000"
+21-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:11:9-41
+22        android:required="true" />
+22-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:12:9-32
+23    <uses-feature
+23-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:13:5-15:36
+24        android:name="android.hardware.wifi"
+24-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:14:9-45
+25        android:required="false" />
+25-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:15:9-33
+26
+27    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+27-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:19:5-76
+27-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:19:22-73
+28
+29    <permission
+29-->[androidx.core:core:1.9.0] /Users/stipe/.gradle/caches/transforms-3/c2aff38445ebad8ddeaa989ecf50f56e/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+30        android:name="com.example.flutter_practice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+30-->[androidx.core:core:1.9.0] /Users/stipe/.gradle/caches/transforms-3/c2aff38445ebad8ddeaa989ecf50f56e/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+31        android:protectionLevel="signature" />
+31-->[androidx.core:core:1.9.0] /Users/stipe/.gradle/caches/transforms-3/c2aff38445ebad8ddeaa989ecf50f56e/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+32
+33    <uses-permission android:name="com.example.flutter_practice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+33-->[androidx.core:core:1.9.0] /Users/stipe/.gradle/caches/transforms-3/c2aff38445ebad8ddeaa989ecf50f56e/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+33-->[androidx.core:core:1.9.0] /Users/stipe/.gradle/caches/transforms-3/c2aff38445ebad8ddeaa989ecf50f56e/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+34
+35    <application
+36        android:name="android.app.Application"
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.9.0] /Users/stipe/.gradle/caches/transforms-3/c2aff38445ebad8ddeaa989ecf50f56e/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+38        android:debuggable="true"
+39        android:icon="@mipmap/ic_launcher"
+40        android:label="flutter_practice" >
+41        <activity
+42            android:name="com.example.flutter_practice.MainActivity"
+43            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+44            android:exported="true"
+45            android:hardwareAccelerated="true"
+46            android:launchMode="singleTop"
+47            android:theme="@style/LaunchTheme"
+48            android:windowSoftInputMode="adjustResize" >
+49
+50            <!--
+51                 Specifies an Android theme to apply to this Activity as soon as
+52                 the Android process has started. This theme is visible to the user
+53                 while the Flutter UI initializes. After that, this theme continues
+54                 to determine the Window background behind the Flutter UI.
+55            -->
+56            <meta-data
+57                android:name="io.flutter.embedding.android.NormalTheme"
+58                android:resource="@style/NormalTheme" />
+59
+60            <intent-filter>
+61                <action android:name="android.intent.action.MAIN" />
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+64            </intent-filter>
+65        </activity>
+66        <!--
+67             Don't delete the meta-data below.
+68             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+69        -->
+70        <meta-data
+71            android:name="flutterEmbedding"
+72            android:value="2" />
+73
+74        <service
+74-->[:geolocator_android] /Users/stipe/Desktop/VENU/flutter_practice/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:56
+75            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+75-->[:geolocator_android] /Users/stipe/Desktop/VENU/flutter_practice/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-77
+76            android:enabled="true"
+76-->[:geolocator_android] /Users/stipe/Desktop/VENU/flutter_practice/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-35
+77            android:exported="false"
+77-->[:geolocator_android] /Users/stipe/Desktop/VENU/flutter_practice/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+78            android:foregroundServiceType="location" />
+78-->[:geolocator_android] /Users/stipe/Desktop/VENU/flutter_practice/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-53
+79
+80        <provider
+80-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:22:9-30:20
+81            android:name="androidx.startup.InitializationProvider"
+81-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:23:13-67
+82            android:authorities="com.example.flutter_practice.androidx-startup"
+82-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:24:13-68
+83            android:exported="false" >
+83-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:25:13-37
+84            <meta-data
+84-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:27:13-29:52
+85                android:name="com.mapbox.maps.loader.MapboxMapsInitializer"
+85-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:28:17-76
+86                android:value="androidx.startup" />
+86-->[com.mapbox.maps:android-core:10.13.1] /Users/stipe/.gradle/caches/transforms-3/9c490f90c63ec604c9dc33f3b5eb4136/transformed/jetified-android-core-10.13.1/AndroidManifest.xml:29:17-49
+87            <!-- This entry makes MapboxSDKCommonInitializer discoverable. -->
+88            <meta-data
+88-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:21:13-23:52
+89                android:name="com.mapbox.common.MapboxSDKCommonInitializer"
+89-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:22:17-76
+90                android:value="androidx.startup" />
+90-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:23:17-49
+91        </provider>
+92
+93        <receiver
+93-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:26:9-33:20
+94            android:name="com.mapbox.common.location.LocationUpdatesReceiver"
+94-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:27:13-78
+95            android:enabled="true"
+95-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:28:13-35
+96            android:exported="false" >
+96-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:29:13-37
+97            <intent-filter>
+97-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:30:13-32:29
+98                <action android:name="com.mapbox.common.location.LocationUpdatesReceiver.ACTION_PROCESS_LOCATION_UPDATES" />
+98-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:31:17-125
+98-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:31:25-122
+99            </intent-filter>
+100        </receiver>
+101
+102        <service
+102-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:35:9-37:40
+103            android:name="com.mapbox.common.LifecycleService"
+103-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:36:13-62
+104            android:exported="false" />
+104-->[com.mapbox.common:common:23.5.0] /Users/stipe/.gradle/caches/transforms-3/1cf984d761aea56d1f9559b4ce31f875/transformed/jetified-common-23.5.0/AndroidManifest.xml:37:13-37
+105
+106        <uses-library
+106-->[androidx.window:window:1.0.0-beta04] /Users/stipe/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+107            android:name="androidx.window.extensions"
+107-->[androidx.window:window:1.0.0-beta04] /Users/stipe/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+108            android:required="false" />
+108-->[androidx.window:window:1.0.0-beta04] /Users/stipe/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+109        <uses-library
+109-->[androidx.window:window:1.0.0-beta04] /Users/stipe/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+110            android:name="androidx.window.sidecar"
+110-->[androidx.window:window:1.0.0-beta04] /Users/stipe/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+111            android:required="false" />
+111-->[androidx.window:window:1.0.0-beta04] /Users/stipe/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+112
+113        <activity
+113-->[com.google.android.gms:play-services-base:18.1.0] /Users/stipe/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+114            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+114-->[com.google.android.gms:play-services-base:18.1.0] /Users/stipe/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+115            android:exported="false"
+115-->[com.google.android.gms:play-services-base:18.1.0] /Users/stipe/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+116            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+116-->[com.google.android.gms:play-services-base:18.1.0] /Users/stipe/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+117
+118        <meta-data
+118-->[com.google.android.gms:play-services-basement:18.1.0] /Users/stipe/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+119            android:name="com.google.android.gms.version"
+119-->[com.google.android.gms:play-services-basement:18.1.0] /Users/stipe/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+120            android:value="@integer/google_play_services_version" />
+120-->[com.google.android.gms:play-services-basement:18.1.0] /Users/stipe/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+121    </application>
+122
+123</manifest>

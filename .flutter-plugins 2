@@ -1,0 +1,15 @@
+# This is a generated file; do not edit or check into version control.
+flutter_plugin_android_lifecycle=/Users/stipe/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.16/
+geocoding=/Users/stipe/.pub-cache/hosted/pub.dev/geocoding-2.1.0/
+geocoding_android=/Users/stipe/.pub-cache/hosted/pub.dev/geocoding_android-2.1.2/
+geocoding_ios=/Users/stipe/.pub-cache/hosted/pub.dev/geocoding_ios-2.1.0/
+geolocator=/Users/stipe/.pub-cache/hosted/pub.dev/geolocator-10.0.1/
+geolocator_android=/Users/stipe/.pub-cache/hosted/pub.dev/geolocator_android-4.2.4/
+geolocator_apple=/Users/stipe/.pub-cache/hosted/pub.dev/geolocator_apple-2.2.7/
+geolocator_web=/Users/stipe/.pub-cache/hosted/pub.dev/geolocator_web-2.1.6/
+geolocator_windows=/Users/stipe/.pub-cache/hosted/pub.dev/geolocator_windows-0.2.0/
+mapbox_maps_flutter=/Users/stipe/.pub-cache/hosted/pub.dev/mapbox_maps_flutter-0.4.4/
+permission_handler=/Users/stipe/.pub-cache/hosted/pub.dev/permission_handler-11.0.0/
+permission_handler_android=/Users/stipe/.pub-cache/hosted/pub.dev/permission_handler_android-11.0.1/
+permission_handler_apple=/Users/stipe/.pub-cache/hosted/pub.dev/permission_handler_apple-9.1.4/
+permission_handler_windows=/Users/stipe/.pub-cache/hosted/pub.dev/permission_handler_windows-0.1.3/
