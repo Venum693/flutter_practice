@@ -24,10 +24,10 @@ class _AnimationDemoState extends State<AnimationDemo> with TickerProviderStateM
     );
 
     // Create an Animation that scales from 0 to 1.
-    _imageAnimation1 = Tween<double>(begin: 0.0, end: 0.5).animate(
+    _imageAnimation1 = Tween<double>(begin: 0.0, end: 1).animate(
       CurvedAnimation(
         parent: _animationController!,
-        curve: Interval(0.0, 1.0, curve: Curves.easeInOut),
+        curve: Interval(0.0, 1.0, curve: Curves.elasticOut),
       ),
     );
     _imageAnimation2 = Tween<double>(begin: 0.0, end: 1.0).animate(
@@ -45,40 +45,41 @@ class _AnimationDemoState extends State<AnimationDemo> with TickerProviderStateM
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Animation'),
+      ),
+      backgroundColor: Color(0xff0D310E),
           body : AnimatedBuilder(
         animation: _imageAnimation1!,
         builder: (context, child) {
-          return Stack(
-            children: [
-              // Position the top image.
-              Positioned(
-                top: 0.0,
-                left: 0.0,
-                right: 0.0,
-                child: Transform.scale(
-                  scale: _imageAnimation1!.value,
-                  child: Image.asset(
-                    'assets/images/mypoker.png',
-                    fit: BoxFit.cover,
+          return Center(
+            child: Column(
+              children: [
+                // Position the top image.
+                Container(
+                  height: 100,
+                  child: Transform.scale(
+                    scale: _imageAnimation1!.value,
+                    child: Image.asset(
+                      'assets/images/mypoker.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
 
-              // Position the bottom image.
-              Positioned(
-                bottom: 5,
-                left: 0.0,
-                right: 0.0,
-
-                child: Transform.scale(
-                  scale: _imageAnimation2!.value,
-                  child: Image.asset(
-                    'assets/images/sanjuydutt.png',
-                    fit: BoxFit.cover,
+                // Position the bottom image.
+                Container(
+                  height: 200,
+                  child: Transform.scale(
+                    scale: _imageAnimation2!.value,
+                    child: Image.asset(
+                      'assets/images/sanjuydutt.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           );
         },
       ),
