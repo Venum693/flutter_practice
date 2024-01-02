@@ -3,6 +3,7 @@ import 'package:flutter_practice/Animation.dart';
 import 'package:flutter_practice/interactive_viewer.dart';
 import 'package:flutter_practice/keys.dart';
 import 'package:flutter_practice/ONDC%20/ondc_cart.dart';
+import 'package:flutter_practice/navigation.dart';
 import 'package:flutter_practice/pagination.dart';
 
 import 'Official Maps/official_mapbox_image source.dart';
@@ -40,7 +41,9 @@ class MyApp extends StatelessWidget {
       //home: KeysTypes(),
       //home: OndcCart(),
       //home: DemoInteractiveViewer(),
-      home: AnimationDemo(),
+      //home: AnimationDemo(),
+      home: SampleNavigationApp(),
+
     );
   }
 }
